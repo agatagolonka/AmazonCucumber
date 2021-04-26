@@ -3,13 +3,12 @@ Feature: Adding product to Wishlist
   I want: to add product to Wishlist
   So that: I can add product to Wishlist
 
-  Scenario: Adding product to Wishlist
+  Scenario Outline: Adding product to Wishlist
     Given Customer is on page with url 'home.page.url'
-    When Customer add product to wishlist from '<direct search>'
+    When  Enter the <email> and <password>
+    And Customer add product to wishlist 'item.page.url'
+    Then Product should be present on wishlist
 
-      |direct search    |
-      |default.product.short.name|
-    Then Product should be present on wishlist '<product name>'
-
-      |product name        |
-      |default.product.name|
+    Examples:
+      | email                       | password           |
+      | annanowaktestuser@gmail.com | annanowaktestuser  |

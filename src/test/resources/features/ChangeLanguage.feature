@@ -8,5 +8,5 @@ Feature: Change language
   When Customer change language '<language>'
     Then Language should be changed
     Examples:
-  |language      |
-  |polish       |
+  |language   |option
+  | Deutsch   | DE-msg

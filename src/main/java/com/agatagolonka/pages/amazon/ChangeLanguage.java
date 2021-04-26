@@ -10,14 +10,14 @@ public class ChangeLanguage extends BasePage {
     @FindBy(xpath = "//span[@class=\"icp-nav-flag icp-nav-flag-us\"]")
     public static WebElement COUNTRY;
 
-    @FindBy(xpath ="//i[@class=\"a-icon a-icon-radio\" and text()=\"     Deutsch - DE     \"]" )
+    @FindBy(xpath = "//input[@value='de_DE']")
     public static WebElement DEUTSCH;
 
 
     @FindBy(xpath ="//input[@aria-labelledby]" )
     public static WebElement CONFIRM;
 
-    @FindBy(xpath ="//select[@aria-describedby]" )
+    @FindBy(id="nav-search-label-id" )
     public static WebElement ALL;
 
     public ChangeLanguage(WebDriver driver, PageManager pageManage) {

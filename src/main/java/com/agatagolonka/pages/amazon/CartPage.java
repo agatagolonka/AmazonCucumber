@@ -24,6 +24,8 @@ public class CartPage extends BasePage {
     public static WebElement SHOPPING_CART_HEADER;
     @FindBy(xpath = "//select[@id='quantity']")
     public static WebElement QUANTITY;
+    @FindBy(xpath = "//a[@id=\"dropdown1_4\"]")
+    public static WebElement QUANTITY4;
     private final String SHOPPING_CART_EMPTY_MSG = "Your Amazon Cart is empty";
     private final String SHOPPING_CART_PAGE = "https://www.amazon.com/gp/cart/view.html?ref_=nav_cart";
 
@@ -56,8 +58,6 @@ public class CartPage extends BasePage {
     }
 
     public void incrementQuantity(String quantity){
-            selectFromDropdownByText(QUANTITY, quantity);
-
-
+            selectFromDropdownByText(QUANTITY, "4");
     }
 }

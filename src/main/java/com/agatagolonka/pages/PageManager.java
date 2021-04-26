@@ -20,6 +20,7 @@ public class PageManager {
     private SearchPage searchPage;
     private ProductPage productPage;
     private ChangeLanguage changeLanguage;
+    private WishListPage wishListPage;
 
 
     public PageManager(WebDriver driver){
@@ -49,7 +50,12 @@ public class PageManager {
             signInPage = new SignInPage(driver, this);
         return signInPage;
     }
+    public WishListPage wishListPage(){
 
+        if(wishListPage == null)
+            wishListPage = new WishListPage(driver, this);
+        return wishListPage;
+    }
     public SearchPage searchPage(){
 
         if(searchPage== null)

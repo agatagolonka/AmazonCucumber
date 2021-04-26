@@ -10,7 +10,7 @@ import org.openqa.selenium.support.FindBy;
 public class ProductPage extends BasePage {
     @FindBy(xpath = "//input[@id='add-to-cart-button']")
     public static WebElement ADD_TO_CART;
-    @FindBy(xpath = "//span[@cel_widget_id=\"MAIN-SEARCH_RESULTS-1\"]")
+    @FindBy(xpath = "//span[@cel_widget_id='MAIN-SEARCH_RESULTS-1']//span[@class='a-size-base-plus a-color-base a-text-normal']")
     public static WebElement SEARCHED_ITEM ;
 
     public ProductPage(WebDriver driver, PageManager pageManage) {
