@@ -13,6 +13,9 @@ public class CartPage extends BasePage {
     @FindBy(id = "nav-cart")
     public static WebElement GO_TO_CART;
 
+
+    @FindBy(xpath = "//input[@aria-labelledby=\"attach-sidesheet-view-cart-button-announce\"]")
+    public static WebElement CONTINUE_GO_TO_CART;
     @FindBy(id = "sc-subtotal-label-activecart")
     public static WebElement SUBTOTAL;
 
@@ -59,5 +62,12 @@ public class CartPage extends BasePage {
 
     public void incrementQuantity(String quantity){
             selectFromDropdownByText(QUANTITY, "4");
+    }
+
+    public void continueGoToCart() {
+        implicitWait(5);
+        waitForElementToBeVisible(CONTINUE_GO_TO_CART);
+        CONTINUE_GO_TO_CART.click();
+
     }
 }

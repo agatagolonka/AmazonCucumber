@@ -25,7 +25,7 @@ public class CartSteps {
 
     @Then("Products should be present on basket page {string}")
     public void productsShouldBePresentOnBasketPageProductName(String product) throws Exception {
-        pageManager.cartPage().goToCart();
+        pageManager.cartPage().continueGoToCart();
         String sub= pageManager.cartPage().getProductsSubtotal();
         Assert.assertEquals(sub,1);
     }

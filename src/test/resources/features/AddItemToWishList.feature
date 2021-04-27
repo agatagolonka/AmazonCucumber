@@ -4,9 +4,9 @@ Feature: Adding product to Wishlist
   So that: I can add product to Wishlist
 
   Scenario Outline: Adding product to Wishlist
-    Given Customer is on page with url 'home.page.url'
-    When  Enter the <email> and <password>
-    And Customer add product to wishlist 'item.page.url'
+    Given Customer is on page with url 'item.page.url'
+    When Add product to wishlist
+    And  Enter the <email> and <password>
     Then Product should be present on wishlist
 
     Examples:
