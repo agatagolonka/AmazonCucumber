@@ -4,7 +4,6 @@ import com.agatagolonka.drivers.CucumberStepContext;
 import com.agatagolonka.pages.PageManager;
 import com.agatagolonka.properties.PropertyManager;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -16,12 +15,10 @@ public class WishListSteps {
     PropertyManager propertyManager = CucumberStepContext.getInstance().getPropertyManager();
 
 
-
     @Then("Product should be present on wishlist")
     public void productShouldBePresentOnWishlist() {
         Assert.assertFalse(pageManager.wishListPage().emptyList());
     }
-
 
 
     @And("Customer add product to wishlist {string}")
@@ -34,7 +31,7 @@ public class WishListSteps {
 
     @When("Add product to wishlist")
     public void addProductToWishlist() throws Exception {
-            pageManager.wishListPage().addToWishlist();
+        pageManager.wishListPage().addToWishlist();
     }
 
 }

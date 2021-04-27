@@ -2,7 +2,6 @@ package com.agatagolonka.pages.amazon;
 
 import com.agatagolonka.pages.BasePage;
 import com.agatagolonka.pages.PageManager;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,17 +10,17 @@ import org.openqa.selenium.support.FindBy;
 public class SignInPage extends BasePage {
 
     @FindBy(css = "#ap_email")
-    public static WebElement USERNAME ;
+    public static WebElement USERNAME;
     @FindBy(css = "#ap_password")
-    public static WebElement PASSWORD ;
+    public static WebElement PASSWORD;
     @FindBy(css = "#signInSubmit")
-    public static WebElement SIGNIN_BUTTON ;
+    public static WebElement SIGNIN_BUTTON;
     @FindBy(id = "nav-link-accountList")
-    public static WebElement START_LOGIN ;
+    public static WebElement START_LOGIN;
     @FindBy(id = "continue")
-    public static WebElement CONTINUE_LOGIN ;
+    public static WebElement CONTINUE_LOGIN;
     @FindBy(id = "nav-link-accountList-nav-line-1")
-    public static WebElement ACCOUNT_NAME ;
+    public static WebElement ACCOUNT_NAME;
 
     public SignInPage(WebDriver driver, PageManager pageManage) {
         super(driver, pageManage);
@@ -36,7 +35,8 @@ public class SignInPage extends BasePage {
         waitForElementToBeVisible(PASSWORD);
         enterText(PASSWORD, password);
     }
-    public String getUserName(){
+
+    public String getUserName() {
         waitForElementToBeVisible(ACCOUNT_NAME);
         return ACCOUNT_NAME.getText();
     }

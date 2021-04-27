@@ -7,7 +7,7 @@ import java.io.StringWriter;
 
 public class LogUtil {
 
-    public static void logStackTrace(Throwable e, Logger logger){
+    public static void logStackTrace(Throwable e, Logger logger) {
 
         StringWriter stringWriter = new StringWriter();
         e.printStackTrace(new PrintWriter(stringWriter));

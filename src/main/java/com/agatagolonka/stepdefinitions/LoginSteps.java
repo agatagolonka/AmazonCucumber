@@ -16,7 +16,7 @@ public class LoginSteps {
     PropertyManager propertyManager = CucumberStepContext.getInstance().getPropertyManager();
 
     @When("^Enter the (.*) and (.*)$")
-    public void enterTheEmailAndPassword(String email,String password) throws Exception {
+    public void enterTheEmailAndPassword(String email, String password) throws Exception {
         pageManager.signInPage().clickStartLogin();
         pageManager.signInPage().enterUsername(email);
         pageManager.signInPage().clickContinue();
@@ -34,9 +34,9 @@ public class LoginSteps {
     @Then("Username should be correct {string}")
     public void usernameShouldBeCorrectUsername(String username) {
 
-            pageManager.signInPage().getUserName();
-            String str = pageManager.signInPage().getUserName();
-            Assert.assertTrue(str.contains(username));
+        pageManager.signInPage().getUserName();
+        String str = pageManager.signInPage().getUserName();
+        Assert.assertTrue(str.contains(username));
 
     }
 

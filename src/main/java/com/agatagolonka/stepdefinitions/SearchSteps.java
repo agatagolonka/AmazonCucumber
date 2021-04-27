@@ -6,7 +6,9 @@ import com.agatagolonka.properties.PropertyManager;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;;
+import org.testng.Assert;
+
+;
 
 public class SearchSteps {
     WebDriver driver = CucumberStepContext.getInstance().getDriver();
@@ -17,7 +19,6 @@ public class SearchSteps {
     public void customerPerformsSearchForSearchingProduct(String product) throws Exception {
         pageManager.searchPage().implicitWait(5);
         pageManager.searchPage().searchSomething(product);
-
 
 
     }

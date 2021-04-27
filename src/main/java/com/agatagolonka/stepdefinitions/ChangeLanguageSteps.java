@@ -22,6 +22,6 @@ public class ChangeLanguageSteps {
 
     @Then("Language should be changed")
     public void languageShouldBeChanged() {
-        Assert.assertFalse(pageManager.changeLanguage().getTextAfterChange()=="All");
+        Assert.assertFalse(pageManager.changeLanguage().getTextAfterChange() == "All");
     }
 }

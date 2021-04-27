@@ -27,21 +27,21 @@ public class WishListPage extends BasePage {
         super(driver, pageManage);
     }
 
-        public void addToWishlist() throws Exception {
-            waitForElementToBeVisible(ADD_TO_WISHLIST);
-            ADD_TO_WISHLIST.click();
-        }
+    public void addToWishlist() throws Exception {
+        waitForElementToBeVisible(ADD_TO_WISHLIST);
+        ADD_TO_WISHLIST.click();
+    }
 
-        public void goToWishlist(){
-            waitForElementToBeVisible(NAVIGATION_ARROW);
-            NAVIGATION_ARROW.click();
-            waitForElementToBeVisible(GO_TO_WISHLIST);
-            GO_TO_WISHLIST.click();
-        }
+    public void goToWishlist() {
+        waitForElementToBeVisible(NAVIGATION_ARROW);
+        NAVIGATION_ARROW.click();
+        waitForElementToBeVisible(GO_TO_WISHLIST);
+        GO_TO_WISHLIST.click();
+    }
 
-    public boolean emptyList(){
+    public boolean emptyList() {
         waitForElementToBeVisible(EMPTY_LIST);
-        String str ="There are no items in this List. ";
+        String str = "There are no items in this List. ";
         return !str.equals(EMPTY_LIST.getText());
     }
 

@@ -6,15 +6,16 @@ import org.openqa.selenium.WebDriver;
 
 public class CucumberStepContext {
 
+    private static CucumberStepContext instance;
     WebDriver driver;
     PageManager pageManager;
     PropertyManager propertyManager;
-    private static CucumberStepContext instance;
 
-    private CucumberStepContext(){}
+    private CucumberStepContext() {
+    }
 
-    public static CucumberStepContext getInstance(){
-        if(instance == null)
+    public static CucumberStepContext getInstance() {
+        if (instance == null)
             instance = new CucumberStepContext();
         return instance;
     }
