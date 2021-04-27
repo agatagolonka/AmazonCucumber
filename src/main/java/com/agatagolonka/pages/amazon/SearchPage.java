@@ -5,6 +5,9 @@ import com.agatagolonka.pages.PageManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
+
+import java.util.List;
 
 public class SearchPage extends BasePage {
 
@@ -14,6 +17,10 @@ public class SearchPage extends BasePage {
     public static WebElement SEARCH_BUTTON;
     @FindBy(id = "search")
     public static WebElement RESULT_ITEM;
+
+    @FindBys({
+            @FindBy(xpath = "//a[@class='a-link-normal a-text-normal']")})
+    public static List<WebElement> LIST_OF_ITEMS;
 
     public SearchPage(WebDriver driver, PageManager pageManage) {
         super(driver, pageManage);
@@ -26,7 +33,12 @@ public class SearchPage extends BasePage {
     }
 
     public String getProductName() {
-        return RESULT_ITEM.getText();
+        return LIST_OF_ITEMS.get(0).getText();
+    }
+
+    public SearchPage firstItem() {
+        click(LIST_OF_ITEMS.get(0));
+        return this;
     }
 
 }

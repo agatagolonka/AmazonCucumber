@@ -16,7 +16,7 @@ public class CartPage extends BasePage {
 
     @FindBy(xpath = "//input[@aria-labelledby=\"attach-sidesheet-view-cart-button-announce\"]")
     public static WebElement CONTINUE_GO_TO_CART;
-    @FindBy(id = "sc-subtotal-label-activecart")
+    @FindBy(id = "//div[@data-name='Subtotals']")
     public static WebElement SUBTOTAL;
 
     @FindBy(css = "input[value='Delete']")
